@@ -4,7 +4,7 @@ class Spree::Inquiry < ActiveRecord::Base
   validates :email ,:presence => true
   validates :message ,:presence => true
    
- after_save :deliver_notification_email
+  after_save :deliver_notification_email
 
 
   def deliver_notification_email
